@@ -18,10 +18,9 @@ working_data$datetime <- as.POSIXct(datetime)
 
 # Plot 3 
 
-par(mfrow=c(1,1))
 with(working_data, {
 plot(Sub_metering_1 ~ datetime, type="l",
-ylab="Global Active Power (kilowatts)", xlab="")
+ylab="Energy sub metering", xlab="")
 lines(Sub_metering_2 ~ datetime,col='Red')
 lines(Sub_metering_3 ~ datetime,col='Blue')
 })
@@ -32,3 +31,4 @@ legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
 
 dev.copy(png, file="plot3.png", height=480, width=480)
 dev.off()
+
