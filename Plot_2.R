@@ -4,7 +4,7 @@
 
 # Getting dataset
 getwd()
-setwd("C:/Users/Administrador/Documents/ex_data")
+setwd("C:/Users/Ronald/Documents/R/ExData_Plotting")
 global_data <- read.csv("household_power_consumption.txt", header=T,sep=';', na.strings="?", nrow=2075259, check.names=F, stringsAsFactors=F,comment.char="", quote='\"')
 global_data$Date <- as.Date(global_data$Date, format="%d/%m/%Y")
 
@@ -16,6 +16,7 @@ rm(global_data)
 datetime <- paste(as.Date(working_data$Date), working_data$Time)
 working_data$datetime <- as.POSIXct(datetime)
 
+setwd("C:/Users/Ronald/Documents/R/ExData_Plotting1/ExData_Plotting1")
 # Plot 2 (Basics)
 
 plot(working_data$Global_active_power ~ working_data$datetime,
